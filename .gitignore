@@ -6,8 +6,13 @@
 # dotenv files
 .env
 
+temp/
 
 .vscode/
+
+load-test/
+
+.config/
 
 # User-specific files
 *.rsuser

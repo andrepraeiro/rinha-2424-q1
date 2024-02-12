@@ -1,0 +1,20 @@
+version: '3.9'
+name: 'rinha-backend-praeiro'
+
+services:
+  db:
+    image: postgres:alpine
+    container_name: rinhadb
+    hostname: database
+    environment:
+      - POSTGRES_PASSWORD=rinha
+      - POSTGRES_USER=rinha
+      - POSTGRES_DB=rinha
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+    volumes:
+      - ./Sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+networks:
+  app-network:

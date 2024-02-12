@@ -1,0 +1,6 @@
+@rinha_api_HostAddress = http://localhost:5014
+
+GET {{rinha_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
